@@ -1,0 +1,10 @@
+ using System;
+
+ class DeclaracaoVariaveis
+{
+	static void main ()
+	{
+		int a ; 
+		Console.WriteLine(a);
+	}
+}
