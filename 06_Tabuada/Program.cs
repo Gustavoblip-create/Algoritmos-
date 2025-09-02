@@ -17,7 +17,7 @@ namespace _06_tabuada
             while (!digitacaoValida)
             {
                 Console.WriteLine("Digite um numero inteiro");
-                digitacaoValida = int.TryParse(Console.ReadLine(), out multiplicando);
+                int.TryParse(Console.ReadLine(), out multiplicando);
             }
 
             // Console.WriteLine("Tabuada do {0}",multiplicando;
