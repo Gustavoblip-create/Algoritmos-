@@ -47,6 +47,16 @@ namespace _01_DelcaracaoClasse
             //conta3.saldo = 123;
             // conta3.limite = 10000;
 
+            aluno alunoLuisGustavo = new aluno();
+
+            alunoLuisGustavo.codigo = 1;
+            alunoLuisGustavo.nome = "Luis Gustavo De Sousa Soeiro";
+            alunoLuisGustavo.lancarNota(1, 8.6);
+            alunoLuisGustavo.lancarNota(2,9.0);
+            alunoLuisGustavo.lancarNota(3, 9.5);
+            alunoLuisGustavo.lancarNota(4,10.0);
+
+            Console.WriteLine($"Aluno {alunoLuisGustavo.nome} {alunoLuisGustavo.mencao()} com média de {alunoLuisGustavo.CalcularMedia():N2}");
 
 
         }
