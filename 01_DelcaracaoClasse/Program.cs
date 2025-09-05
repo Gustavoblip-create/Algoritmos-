@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
@@ -12,32 +13,41 @@ namespace _01_DelcaracaoClasse
     {
         static void Main(string[] args)
         {
-            quadrado obj1 = new quadrado();
-            obj1.Lado = 5;
-            obj1.ImprimiArea();
+            //quadrado obj1 = new quadrado();
+            // obj1.Lado = 5;
+            // obj1.ImprimiArea();
 
-            obj1.Lado = 15;
-            obj1.ImprimiArea();
+            //obj1.Lado = 15;
+            //obj1.ImprimiArea();
 
-            quadrado obj2 = new quadrado();
-            obj2.Lado = 25;
+            //quadrado obj2 = new quadrado();
+            //obj2.Lado = 25;
 
-            obj2.ImprimiArea();
+            ///obj2.ImprimiArea();
 
-            Retangulo obj3 = new Retangulo();
-            obj3.largura = 10;
-            obj3.altura = 5;
-            obj3.ImprimiArea();
+            //Retangulo obj3 = new Retangulo();
+            /// obj3.largura = 10;
+            // obj3.altura = 5;
+            // obj3.ImprimiArea();
 
 
-            circulo obj4 = new circulo();
-            obj4.raio = 10;
-            obj4.ImprimiArea();
+            //circulo obj4 = new circulo();
+            /// obj4.raio = 10;
+            // obj4.ImprimiArea();
 
-            triangulo obj5 = new triangulo();
-            obj5.altura = 25.6;
-            obj5.Base = 12.75;
-            obj5.ImprimiArea();
+            //triangulo obj5 = new triangulo();
+            //obj5.altura = 25.6;
+            ///obj5.Base = 12.75;
+            // obj5.ImprimiArea();
+
+            //conta conta3 = new conta();
+            //conta3.banco = 1;
+            // conta3.agencia = "0001";
+            // conta3.numero = "123";
+            //conta3.saldo = 123;
+            // conta3.limite = 10000;
+
+
 
         }
     }
@@ -109,4 +119,69 @@ namespace _01_DelcaracaoClasse
 
 
     }
+
+    public class conta
+    {
+        public int banco;
+        public string agencia;
+        public string numero;
+        public double saldo;
+        public double limite;
+
+        public void Dpositar(double valor)
+        {
+            saldo += valor;
+        }
+        public void Sacar(double valor)
+        {
+            saldo += valor;
+        }
+        public double consultar()
+        {
+            return saldo;
+        }
+
+
+    }
+
+    public class aluno
+    {
+
+        public int codigo;
+        public string nome;
+        public double[] notas = new double[4];
+
+        public void lancarNota (int trimestre, double nota)
+        {
+            notas[trimestre - 1] = nota;
+        }
+
+        public double CalcularMedia()
+        {
+            double media = 0;
+            foreach (double nota in notas)
+            {
+                media += nota;
+            }
+            return media / 4.0;
+
+        }
+        public string mencao()
+        {
+            if (CalcularMedia() >= 5.0)
+                return "aprovado";
+            else
+                return "Reporvado";
+        }
+       
+
+
+   
+    }
+
+
+
+
+
+
 }
