@@ -178,10 +178,12 @@ namespace _01_DelcaracaoClasse
         }
         public string mencao()
         {
-            if (CalcularMedia() >= 5.0)
-                return "aprovado";
-            else
-                return "Reporvado";
+            //if (CalcularMedia() >= 5.0)
+            // return "aprovado";
+            // else
+            //  return "Reporvado";
+
+            return(CalcularMedia() >= 5.0) ? "apreovado" : "REPROVADO";
         }
        
 
